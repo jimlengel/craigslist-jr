@@ -19,7 +19,18 @@ parameters. Instead of printing to the console, we print HTML and CSS.
 We'll only have two models in a one-to-many relationship. No different than
 your command-line TODO app.
 
-There is a skeleton available in `/source`, as per usual
+Clone the [Sinatra Skeleton](../../../sinatra_skeleton_mvc) into the current directory with: `git clone SINATRA_SKELETON_URI`
+
+Check reality by running `ls`, you should see:
+```
+README.md            sinatra_skeleton_mvc
+```
+
+`cd` into the `sinatra_skeleton_mvc` directory.
+
+Remove the `.git` directory from `sinatra_skeleton_mvc` with `rm -rf .git/`
+
+Add the `sinatra_skeleton_mvc` directory to the Craigslist Jr project with `git add .` then commit with `git commit -m "Adds Sinatra Skeleton."`
 
 ## Releases
 
