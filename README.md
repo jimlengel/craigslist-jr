@@ -97,9 +97,9 @@ should be used from the RSpec test menagerie.  The list above suggests that:
   * `/categories` should list categories
 2. A page that lists all the postings in a given category:
   * `/posts` should respond
-  * `/post` list categories
+  * `/posts` list categories
 3. A page that lets someone create a new posting in a given category
-  * `POST` to `/post`should add something to a database
+  * `POST` to `/posts` should add something to a database
   * After addition there should be a redirect
 4. A page that lets someone who has created a page return to edit/update the
 page
