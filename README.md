@@ -21,7 +21,7 @@ your command-line TODO app.
 
 ### Setting up the skeleton
 
-Clone the [Sinatra Skeleton](../../../sinatra_skeleton_mvc) into the current
+Clone the [Sinatra Skeleton](../../../sinatra-skeleton-mvc) into the current
 directory with: `git clone SINATRA_SKELETON_URI`
 
 Check reality by running `ls`, you should see:
