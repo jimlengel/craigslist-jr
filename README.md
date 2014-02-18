@@ -116,7 +116,7 @@ As you can see, our controller structure will be more complicated. We'll want
 URLs that look like `/categories/123` and `/posts/456`. We'll be using both
 `get` and `post` methods.
 
-#### Use <form> to Gather and Send params
+#### Use &lt;form&gt; to Gather and Send params
 
 To create a new `Post`, for example, we'd want to submit an HTML form using the
 POST http method to the `/posts` URL, like so:
