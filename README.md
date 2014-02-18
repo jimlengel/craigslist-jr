@@ -105,7 +105,7 @@ should be used from the RSpec test menagerie.  The list above suggests that:
 page
   * this one might be a bit harder to test, but do your best and think about
 it.
-  * (consult the RSPec documentation for more help (https://relishapp.com/rspec))
+  * (consult the RSPec documentation for more help (https://relishapp.com/rspec)
 
 as you write a test and find it failing, write the implementation in the
 controller to get your test to pass.
