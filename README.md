@@ -82,11 +82,41 @@ An email, so the poster could be contacted. Title, description, etc.
 Spend time enumerating the pages, deciding what should be displayed on each
 one.
 
-### Release 1: Implement Controller Structure
+### Release 1:  Implement Controller Tests &amp; Controller Structure
 
-Our controller structure will be more complicated. We'll want URLs that look
-like `/categories/123` and `/posts/456`. We'll be using both `get` and `post`
-methods.
+#### Testing Inspired By a Wireframe
+
+As it happens, a well-defined wireframe can be an **excellent** guide on how to
+define your controller tests.  Look at the enumerated list above and see how
+each of these pages suggest a route which should be visit-able and should
+return certain data that can be tested.  They even suggest which matchers
+should be used from the RSpec test menagerie.  The list above suggests that:
+
+1. A page that lists all the categories:
+  * `/categories` should respond
+  * `/categories` should list categories
+2. A page that lists all the postings in a given category:
+  * `/posts` should respond
+  * `/post` list categories
+3. A page that lets someone create a new posting in a given category
+  * `POST` to `/post`should add something to a database
+  * After addition there should be a redirect
+4. A page that lets someone who has created a page return to edit/update the
+page
+  * this one might be a bit harder to test, but do your best and think about
+it.
+  * (consult the RSPec documentation for more help (https://relishapp.com/rspec))
+
+as you write a test and find it failing, write the implementation in the
+controller to get your test to pass.
+
+#### Building the Routes
+
+As you can see, our controller structure will be more complicated. We'll want
+URLs that look like `/categories/123` and `/posts/456`. We'll be using both
+`get` and `post` methods.
+
+#### Use <form> to Gather and Send params
 
 To create a new `Post`, for example, we'd want to submit an HTML form using the
 POST http method to the `/posts` URL, like so:
@@ -100,9 +130,9 @@ POST http method to the `/posts` URL, like so:
 and to update an existing record (say with id `1234`) we'd want to post to
 `/posts/1234`.
 
-Controllers should either redirect to another URL or render a page. Typically,
-a page loaded via HTTP POST will redirect to an appropriate URL if a request
-succeeds and render an error page, otherwise.
+Controllers should **either** redirect to another URL or render a page.
+Typically, a page loaded via HTTP POST will redirect to an appropriate URL if a
+request succeeds and render an error page, otherwise.
 
 ### Ship it!
 
