@@ -1,0 +1,9 @@
+<form method="post" action="/articles/<%= @article.id %>">
+    <input type="hidden" name="_method" value="put">
+
+    <div>Title of Article: <input name="article[title]" type="text" value="<%= @article.try(:title) %>">
+    </div>
+    <div>Price: <input name="article[price]" type="text" value="<%= @article.try(:price) %>">
+
+    <input type="submit" value="Add Article" class="button">
+  </form>
