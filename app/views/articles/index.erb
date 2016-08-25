@@ -7,4 +7,12 @@
   <div><a href="/articles/new">Add an article</a></div>
 
 
+
+  <% @articles.reverse.each do |entry| %>
+        <hr>
+        <p><span><b>$<%= entry.price %></b></span> : : :
+        <span><%= entry.title %></span></p>
+        <p><span><%= entry.description %></span></p>
+        <p><span><a href="<% entry.email %>"><%= entry.email %></a></span></p>
+    <% end %>
 </div>
